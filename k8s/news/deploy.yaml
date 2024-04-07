@@ -68,7 +68,7 @@ spec:
             - name: DB_HOST
               value: postgre
             - name: AWS_S3_BUCKET_NAME
-              value: devops4devs-files-wqeqwe
+              value: devops4devs-files-yuyui
             - name: STORAGE_TYPE
               value: S3
           envFrom:
