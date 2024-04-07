@@ -2,10 +2,9 @@ name: CI-CD
 
 on: 
   push:
-    branches: ["main", "feature/*"]
-    paths: 
-      - src/*
-      - .github/workflows/main.yml
+    branches: ["main"]
+    papaths-ignore: : 
+      - k8s/*
   workflow_dispatch:
 
 jobs:
