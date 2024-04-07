@@ -3,7 +3,7 @@ name: CI-CD
 on: 
   push:
     branches: ["main"]
-    papaths-ignore: : 
+    papaths-ignore: 
       - k8s/*
   workflow_dispatch:
 
@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --global user.name "Fabricio Veronez"
           git config --global user.email "fabricioveronez@gmail.com"
-          sed -i 's|fabricioveronez/devops4devs-news:*|fabricioveronez/devops4devs-news:${{github.run_number}}|g' .k8s/news/deploy.yaml
+          sed -i 's|fabricioveronez/devops4devs-news:*$|fabricioveronez/devops4devs-news:${{github.run_number}}|g' ./k8s/news/deploy.yaml
           git add ./k8s
           git commit -m "Alteração para a imagem fabricioveronez/devops4devs-news:${{github.run_number}}"
           git push origin
