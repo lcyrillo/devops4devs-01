@@ -23,7 +23,7 @@ jobs:
           push: true
           tags:
             lcyrillo/devops4devs-news:latest
-            lcyrillo/devops4devs-news:v${{github.run_number}}
+
       - name: "Publicar a imagem no Docker Hub"
         run: echo "Docker push"
   CD:
