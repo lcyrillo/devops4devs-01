@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: lcyrillo/devops4devs-news:5
+          image: lcyrillo/devops4devs-news:${{github.run_number}}
           ports:
             - containerPort: 8080
           env: 
